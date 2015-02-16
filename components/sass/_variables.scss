@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Playball%7CExo+2:400,200,600);
+
+@include border-box-sizing; //uses border box sizing like the old IE
+
+$susy: (
+	columns: 12,
+	container: 60em,
+	gutters: 1/4,
+	gutter-position: inside
+);
+
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+//Add Color Palette
+$blue		: #063642;
+$green		: #45B29D;
+$yellow		: #EFC94C;
+$orange		: #e55927;
+$red		: #DF4848;
+$pink		: #CD0069;
+$purple		: #6C71C4;
+$dark		: #000000;
+$light		: #f0f0f0;
+
+$backgroundColor	: $light;
+$typeDefault		: $dark;
+$navBackground		: $dark;
+$navForeground		: $light;
+$navHover			: $yellow;
+$navBrandBg			: $orange;
+$headersubbg		: $dark;
+
+//Font variables
+$fontFamily1		: 'Playball', 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontFamily2 		: 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$thin		: 200;
+$regular	: 400;
+$bold		: 600;
+
+$headFont	: $regular 1.5em/1.5em $fontFamily1;
+$mainFont	: $thin 1em/1.5em $fontFamily2;
+$headColor	: lighten($blue, 20);

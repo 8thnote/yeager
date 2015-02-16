@@ -1,0 +1,78 @@
+header {
+	.fullheight {
+		@include backImage('../images/mike-yeager-main.jpg', $bgPos: 70% 0);
+		@include breakpoint($medium) {background-position: center center;}
+
+		@include display-flex();
+
+		/*@include align-items(center);*/
+		/*@include justify-content(center);*/
+		
+		#introText {
+			width: 85%;
+			margin: 0 auto;
+			padding-top: 4em;
+
+
+			h1 {
+				color: $light;
+				font-size: 3em;
+				font-weight: $regular;
+				line-height: .8em;
+				text-shadow:
+				/* Simulated effect for Firefox and Opera
+				and nice enhancement for WebKit */
+				-1px -1px 0 darken($orange, 10),  
+				1px -1px 0 darken($orange, 10),
+				-1px  1px 0 darken($orange, 10),
+				1px  1px 0 darken($orange, 10),
+				3px 3px 2px $dark;
+				
+				margin-bottom: -.1em;
+
+				span {
+					letter-spacing: -0.2em;
+				}
+			} //h1
+
+			h2 {
+				color: $orange;
+				font-family: $fontFamily2;
+				font-weight: $regular;
+				@include text-shadow($dark 0 0 20px);
+				font-size: 1em;
+				margin: .3em 0 1em 0;
+			} //h2
+
+			p {
+				text-align: center;
+				color: $light;
+				width: 70%;
+				img {
+					max-width: 50px;
+				} //img
+			} //p
+			.description {
+				background: rgba($headersubbg, .7);
+				padding: 1em 2em;
+				text-align: left;
+				@include border-radius(10px);
+			}//description
+		} //introtext
+		@include breakpoint($small) {
+			#introText {
+				padding-top: 10em;
+				width: 600px;
+				h1 {font-size: 4.5em}
+				h2 {font-size: 1.3em; margin-left: 1.5em;}
+				p {
+					width: 50%;
+					color: $light;
+				}
+			}		
+		}//small
+		@include breakpoint($medium) {
+			#introText {width: 800px;}
+		}
+	} //fullheight
+} //header
