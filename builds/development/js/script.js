@@ -29,10 +29,12 @@ $(function() {
 	var wheight = $(window).height(); //get height of the window
 
 	$('.fullheight').css('height', wheight);
+	$('#about .fullheight').css('height', wheight - topoffset);
 
 	$(window).resize(function() {
 		var wheight = $(window).height(); //get height of the window
 		$('.fullheight').css('height', wheight);
+		$('#about .fullheight').css('height', wheight - topoffset);
 	});
 
 	//smooth scrolling
@@ -55,29 +57,14 @@ $(function() {
 		var windowpos = $(window).scrollTop() + topoffset + 1;
 		$('nav li a').removeClass('active');
 
-		if (windowpos > $('#hotelinfo').offset().top) {
+		if (windowpos > ($('#about').offset().top - 5)) {
 			$('nav li a').removeClass('active');
-			$('a[href$="#hotelinfo"]').addClass('active');
+			$('a[href$="#about"]').addClass('active');
 		}
 
-		if (windowpos > $('#rooms').offset().top) {
+		if (windowpos > $('#gear').offset().top) {
 			$('nav li a').removeClass('active');
-			$('a[href$="#rooms"]').addClass('active');
-		}
-
-		if (windowpos > $('#dining').offset().top) {
-			$('nav li a').removeClass('active');
-			$('a[href$="#dining"]').addClass('active');
-		}
-
-		if (windowpos > $('#events').offset().top) {
-			$('nav li a').removeClass('active');
-			$('a[href$="#events"]').addClass('active');
-		}
-
-		if (windowpos > $('#attractions').offset().top) {
-			$('nav li a').removeClass('active');
-			$('a[href$="#attractions"]').addClass('active');
+			$('a[href$="#gear"]').addClass('active');
 		}
 	});
 
@@ -92,6 +79,8 @@ $(function() {
 	var pin = new ScrollScene({
 		triggerElement: '#nav',
 	}).setPin('#nav').addTo(controller);
+
+/*
 
 	if(!isTouch) {
 		//room animations
@@ -131,6 +120,7 @@ $(function() {
 		}).setTween(attractionstween)
 			.addTo(controller);
 	} //if NOT touch device
+*/
 
 }); //on load
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
