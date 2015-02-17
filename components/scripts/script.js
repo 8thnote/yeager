@@ -32,9 +32,9 @@ $(function() {
 		var windowpos = $(window).scrollTop() + topoffset + 1;
 		$('nav li a').removeClass('active');
 
-		if (windowpos > $('#hotelinfo').offset().top) {
+		if (windowpos > ($('#welcome').offset().top - 5)) {
 			$('nav li a').removeClass('active');
-			$('a[href$="#hotelinfo"]').addClass('active');
+			$('a[href$="#welcome"]').addClass('active');
 		}
 
 		if (windowpos > $('#rooms').offset().top) {

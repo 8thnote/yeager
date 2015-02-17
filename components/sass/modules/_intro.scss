@@ -9,14 +9,19 @@ header {
 		/*@include justify-content(center);*/
 		
 		#introText {
-			width: 85%;
+			width: 90%;
 			margin: 0 auto;
-			padding-top: 4em;
+			padding-top: 3em;
+			transition: .4s ease-in;
 
+			.wrap {
+				display: inline-block;
+				transition: .4s ease-in;
+			}
 
 			h1 {
 				color: $light;
-				font-size: 3em;
+				font-size: 2.5em;
 				font-weight: $regular;
 				line-height: .8em;
 				text-shadow:
@@ -28,7 +33,8 @@ header {
 				1px  1px 0 darken($orange, 10),
 				3px 3px 2px $dark;
 				
-				margin-bottom: -.1em;
+				margin-bottom: .2em;
+				transition: .4s ease-in;
 
 				span {
 					letter-spacing: -0.2em;
@@ -39,36 +45,28 @@ header {
 				color: $orange;
 				font-family: $fontFamily2;
 				font-weight: $regular;
-				@include text-shadow($dark 0 0 20px);
-				font-size: 1em;
-				margin: .3em 0 1em 0;
+				@include text-shadow($dark 2px 2px 2px);
+				font-size: 1.2em;
+				margin: .3em 0 2em 0;
+				transition: .4s ease-in;
 			} //h2
 
 			p {
 				text-align: center;
 				color: $light;
-				width: 70%;
+				transition: .4s ease-in;
 				img {
 					max-width: 50px;
+					transition: .4s ease-in;
 				} //img
 			} //p
-			.description {
-				background: rgba($headersubbg, .7);
-				padding: 1em 2em;
-				text-align: left;
-				@include border-radius(10px);
-			}//description
 		} //introtext
 		@include breakpoint($small) {
 			#introText {
 				padding-top: 10em;
 				width: 600px;
 				h1 {font-size: 4.5em}
-				h2 {font-size: 1.3em; margin-left: 1.5em;}
-				p {
-					width: 50%;
-					color: $light;
-				}
+				h2 {font-size: 1.6em; margin: .3em 0 1em 1em;}
 			}		
 		}//small
 		@include breakpoint($medium) {

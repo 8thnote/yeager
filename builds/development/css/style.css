@@ -169,74 +169,69 @@ header .fullheight {
 }
 /* line 11, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
-  padding-top: 4em;
+  padding-top: 3em;
+  transition: .4s ease-in;
 }
 /* line 17, ../../../components/sass/modules/_intro.scss */
+header .fullheight #introText .wrap {
+  display: inline-block;
+  transition: .4s ease-in;
+}
+/* line 22, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText h1 {
   color: #f0f0f0;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 400;
   line-height: .8em;
   text-shadow: -1px -1px 0 #c24417, 1px -1px 0 #c24417, -1px 1px 0 #c24417, 1px 1px 0 #c24417, 3px 3px 2px #000000;
-  margin-bottom: -.1em;
+  margin-bottom: .2em;
+  transition: .4s ease-in;
 }
-/* line 33, ../../../components/sass/modules/_intro.scss */
+/* line 39, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText h1 span {
   letter-spacing: -0.2em;
 }
-/* line 38, ../../../components/sass/modules/_intro.scss */
+/* line 44, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText h2 {
   color: #e55927;
   font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  text-shadow: #000000 0 0 20px;
-  font-size: 1em;
-  margin: .3em 0 1em 0;
+  text-shadow: #000000 2px 2px 2px;
+  font-size: 1.2em;
+  margin: .3em 0 2em 0;
+  transition: .4s ease-in;
 }
-/* line 47, ../../../components/sass/modules/_intro.scss */
+/* line 54, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText p {
   text-align: center;
   color: #f0f0f0;
-  width: 70%;
+  transition: .4s ease-in;
 }
-/* line 51, ../../../components/sass/modules/_intro.scss */
+/* line 58, ../../../components/sass/modules/_intro.scss */
 header .fullheight #introText p img {
   max-width: 50px;
-}
-/* line 55, ../../../components/sass/modules/_intro.scss */
-header .fullheight #introText .description {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1em 2em;
-  text-align: left;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  transition: .4s ease-in;
 }
 @media (min-width: 650px) {
-  /* line 63, ../../../components/sass/modules/_intro.scss */
+  /* line 65, ../../../components/sass/modules/_intro.scss */
   header .fullheight #introText {
     padding-top: 10em;
     width: 600px;
   }
-  /* line 66, ../../../components/sass/modules/_intro.scss */
+  /* line 68, ../../../components/sass/modules/_intro.scss */
   header .fullheight #introText h1 {
     font-size: 4.5em;
   }
-  /* line 67, ../../../components/sass/modules/_intro.scss */
+  /* line 69, ../../../components/sass/modules/_intro.scss */
   header .fullheight #introText h2 {
-    font-size: 1.3em;
-    margin-left: 1.5em;
-  }
-  /* line 68, ../../../components/sass/modules/_intro.scss */
-  header .fullheight #introText p {
-    width: 50%;
-    color: #f0f0f0;
+    font-size: 1.6em;
+    margin: .3em 0 1em 1em;
   }
 }
 @media (min-width: 960px) {
-  /* line 75, ../../../components/sass/modules/_intro.scss */
+  /* line 73, ../../../components/sass/modules/_intro.scss */
   header .fullheight #introText {
     width: 800px;
   }
