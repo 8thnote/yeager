@@ -1,0 +1,68 @@
+#wrapper {
+
+		.fullheight {
+			@include container(100%);
+			@include pad(1,1);
+
+			@include display-flex();
+			@include align-items(center);
+			@include justify-content(center);
+
+			&.contentLeft {
+				@include breakpoint($small) {
+					@include pad(1,6);
+				} //small
+			}
+			&.contentRight {
+				@include breakpoint($small) {
+					@include pad(6,1);
+				} //small
+			}
+
+			.content {
+				@include border-radius(5px);
+				background: rgba($light, .8);
+				padding: 20px;
+				max-height: 90%;
+				overflow-y: auto;
+			} //content	
+		} //fullheight
+
+		h1 {
+		 	font-size: 2.5em;
+		 	font-weight: normal;
+		 	line-height: 100%;
+		 	color: $orange;
+		 	padding: 10px 0;
+
+		 	br {display: none;}
+
+		 	@include breakpoint($wide) {
+		 		font-size: 3em;
+		 		br {display: block;}
+		 	}
+		} //h1
+
+
+	#about {
+		.fullheight {
+			@include backImage('../images/about-mike.jpg');
+		}
+	} //about
+	#gear {
+		.fullheight {
+			@include backImage('../images/mike-yeager-gear.jpg');		
+		}
+	} //gear
+	#tournaments {
+		.fullheight {
+			@include backImage('../images/yeager-tournaments.jpg');		
+		}
+	} //tournaments
+	#contact {
+		.fullheight {
+			@include backImage('../images/mike-yeager-contact.jpg');		
+		}
+	} //tournaments
+
+} //wrapper

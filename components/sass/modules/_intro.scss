@@ -7,6 +7,8 @@
 
 		/*@include align-items(center);*/
 		/*@include justify-content(center);*/
+
+		
 		
 		#introText {
 			width: 90%;
@@ -62,6 +64,31 @@
 				} //img
 			} //next
 		} //introtext
+		#sponsors {
+			background: rgba($dark, .8);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 110px;
+			width: 100%;
+			padding: 10px;
+			white-space: nowrap;
+			overflow-x: scroll;
+			overflow-y: hidden;
+
+			.wrap {
+				@include container(100%);
+				line-height: 3em;
+				text-align: center;
+			}
+			img {
+				border-radius: 3px;
+				height: 90px;
+				margin-left: 7px;
+				width: auto;
+			}
+			img:first-child {margin-left: 0;}
+		}
 		@include breakpoint($small) {
 			#introText {
 				padding-top: 10em;

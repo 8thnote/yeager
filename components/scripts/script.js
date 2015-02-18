@@ -43,6 +43,16 @@ $(function() {
 			$('nav li a').removeClass('active');
 			$('a[href$="#gear"]').addClass('active');
 		}
+
+		if (windowpos > $('#tournaments').offset().top) {
+			$('nav li a').removeClass('active');
+			$('a[href$="#tournaments"]').addClass('active');
+		}
+
+		if (windowpos > $('#contact').offset().top) {
+			$('nav li a').removeClass('active');
+			$('a[href$="#contact"]').addClass('active');
+		}
 	});
 
 	//set up ScrollMagic

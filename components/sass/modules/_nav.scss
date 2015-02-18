@@ -113,7 +113,7 @@
 				} //a
 
 				@include breakpoint($small $medium) {
-					&#tournaments a {width: 104px;}
+					&#tournLink a {width: 104px;}
 				} //breakpoint
 				
 			} //li

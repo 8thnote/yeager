@@ -1,0 +1,43 @@
+#contact {
+	.fullheight {
+		@include pad(1,1);
+		@include breakpoint($small) {
+			@include pad(3,3);
+		}
+		.content {
+			background: rgba($dark, .7);
+			color: $light;
+
+			p {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+form {
+	input, textarea, button {
+		font: $mainFont;
+		font-weight: $regular;
+		line-height: 1.2em;
+	}
+	input, textarea {
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	input {
+		height: 2em;
+		padding: 0 10px;
+	}
+	textarea {
+		height: 100px;
+		padding: 5px 10px;
+		resize: none;
+		overflow: auto;
+	}
+	button {
+		display: block;
+		margin: 0 auto;
+		width: 50%;
+	}
+}
