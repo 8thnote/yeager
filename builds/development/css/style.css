@@ -147,7 +147,7 @@ body {
   }
 }
 
-/* line 2, ../../../components/sass/modules/_intro.scss */
+/* line 3, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/mike-yeager-main.jpg");
   background-repeat: no-repeat;
@@ -156,30 +156,26 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  /*@include align-items(center);*/
-  /*@include justify-content(center);*/
 }
 @media (min-width: 960px) {
-  /* line 2, ../../../components/sass/modules/_intro.scss */
+  /* line 3, ../../../components/sass/modules/_intro.scss */
   #intro .fullheight {
     background-position: center center;
   }
 }
-/* line 13, ../../../components/sass/modules/_intro.scss */
+/* line 8, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText {
   width: 90%;
   margin: 0 auto;
   padding-top: 3em;
   transition: .4s ease-in;
 }
-/* line 19, ../../../components/sass/modules/_intro.scss */
+/* line 14, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText .wrap {
   display: inline-block;
   transition: .4s ease-in;
 }
-/* line 24, ../../../components/sass/modules/_intro.scss */
+/* line 19, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText h1 {
   color: #f0f0f0;
   font-size: 2.5em;
@@ -189,11 +185,11 @@ body {
   margin-bottom: .2em;
   transition: .4s ease-in;
 }
-/* line 41, ../../../components/sass/modules/_intro.scss */
+/* line 36, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText h1 .kern {
   letter-spacing: -0.2em;
 }
-/* line 46, ../../../components/sass/modules/_intro.scss */
+/* line 41, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText .tagline {
   color: #e55927;
   display: block;
@@ -204,31 +200,31 @@ body {
   margin: .3em 0 2em 0;
   transition: .4s ease-in;
 }
-/* line 57, ../../../components/sass/modules/_intro.scss */
+/* line 52, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText .next {
   text-align: center;
   color: #f0f0f0;
   transition: .4s ease-in;
 }
-/* line 61, ../../../components/sass/modules/_intro.scss */
+/* line 56, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #introText .next img {
   max-width: 50px;
   transition: .4s ease-in;
 }
-/* line 67, ../../../components/sass/modules/_intro.scss */
+/* line 63, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #sponsors {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 110px;
+  height: 125px;
   width: 100%;
   padding: 10px;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
-/* line 79, ../../../components/sass/modules/_intro.scss */
+/* line 75, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #sponsors .wrap {
   max-width: 100%;
   margin-left: auto;
@@ -242,35 +238,35 @@ body {
   display: block;
   clear: both;
 }
-/* line 84, ../../../components/sass/modules/_intro.scss */
+/* line 80, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #sponsors img {
   border-radius: 3px;
   height: 90px;
   margin-left: 7px;
   width: auto;
 }
-/* line 90, ../../../components/sass/modules/_intro.scss */
+/* line 86, ../../../components/sass/modules/_intro.scss */
 #intro .fullheight #sponsors img:first-child {
   margin-left: 0;
 }
 @media (min-width: 650px) {
-  /* line 93, ../../../components/sass/modules/_intro.scss */
+  /* line 90, ../../../components/sass/modules/_intro.scss */
   #intro .fullheight #introText {
     padding-top: 10em;
     width: 600px;
   }
-  /* line 96, ../../../components/sass/modules/_intro.scss */
+  /* line 93, ../../../components/sass/modules/_intro.scss */
   #intro .fullheight #introText h1 {
     font-size: 4.5em;
   }
-  /* line 97, ../../../components/sass/modules/_intro.scss */
+  /* line 94, ../../../components/sass/modules/_intro.scss */
   #intro .fullheight #introText .tagline {
     font-size: .4em;
     margin: .3em 0 1em 1em;
   }
 }
 @media (min-width: 960px) {
-  /* line 101, ../../../components/sass/modules/_intro.scss */
+  /* line 98, ../../../components/sass/modules/_intro.scss */
   #intro .fullheight #introText {
     width: 800px;
   }
@@ -466,8 +462,16 @@ body {
   margin-right: auto;
   padding-left: 9.16667%;
   padding-right: 9.16667%;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
   display: -webkit-flex;
+  -webkit-flex-direction: row;
   display: flex;
+  flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
@@ -480,20 +484,20 @@ body {
   clear: both;
 }
 @media (min-width: 650px) {
-  /* line 11, ../../../components/sass/modules/_main.scss */
+  /* line 22, ../../../components/sass/modules/_main.scss */
   #wrapper .fullheight.contentLeft {
     padding-left: 9.16667%;
     padding-right: 50.83333%;
   }
 }
 @media (min-width: 650px) {
-  /* line 16, ../../../components/sass/modules/_main.scss */
+  /* line 27, ../../../components/sass/modules/_main.scss */
   #wrapper .fullheight.contentRight {
     padding-left: 50.83333%;
     padding-right: 9.16667%;
   }
 }
-/* line 22, ../../../components/sass/modules/_main.scss */
+/* line 33, ../../../components/sass/modules/_main.scss */
 #wrapper .fullheight .content {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -503,7 +507,7 @@ body {
   max-height: 90%;
   overflow-y: auto;
 }
-/* line 31, ../../../components/sass/modules/_main.scss */
+/* line 42, ../../../components/sass/modules/_main.scss */
 #wrapper h1 {
   font-size: 2.5em;
   font-weight: normal;
@@ -511,21 +515,21 @@ body {
   color: #e55927;
   padding: 10px 0;
 }
-/* line 38, ../../../components/sass/modules/_main.scss */
+/* line 49, ../../../components/sass/modules/_main.scss */
 #wrapper h1 br {
   display: none;
 }
 @media (min-width: 1200px) {
-  /* line 31, ../../../components/sass/modules/_main.scss */
+  /* line 42, ../../../components/sass/modules/_main.scss */
   #wrapper h1 {
     font-size: 3em;
   }
-  /* line 42, ../../../components/sass/modules/_main.scss */
+  /* line 53, ../../../components/sass/modules/_main.scss */
   #wrapper h1 br {
     display: block;
   }
 }
-/* line 48, ../../../components/sass/modules/_main.scss */
+/* line 59, ../../../components/sass/modules/_main.scss */
 #wrapper #about .fullheight {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/about-mike.jpg");
   background-repeat: no-repeat;
@@ -535,7 +539,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 53, ../../../components/sass/modules/_main.scss */
+/* line 64, ../../../components/sass/modules/_main.scss */
 #wrapper #gear .fullheight {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/mike-yeager-gear.jpg");
   background-repeat: no-repeat;
@@ -545,7 +549,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 58, ../../../components/sass/modules/_main.scss */
+/* line 69, ../../../components/sass/modules/_main.scss */
 #wrapper #tournaments .fullheight {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/yeager-tournaments.jpg");
   background-repeat: no-repeat;
@@ -555,7 +559,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 63, ../../../components/sass/modules/_main.scss */
+/* line 74, ../../../components/sass/modules/_main.scss */
 #wrapper #contact .fullheight {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/mike-yeager-contact.jpg");
   background-repeat: no-repeat;

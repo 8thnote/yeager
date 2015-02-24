@@ -4,7 +4,18 @@
 			@include container(100%);
 			@include pad(1,1);
 
-			@include display-flex();
+			@include flexbox((
+			    display: box,
+			    box-orient: vertical
+			  ), $version: 1);
+			  @include flexbox((
+			    display: flexbox,
+			    flex-direction: row
+			  ), $version: 2);
+			  @include flexbox((
+			    display: flex,
+			    flex-direction: row
+			  ));
 			@include align-items(center);
 			@include justify-content(center);
 

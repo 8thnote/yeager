@@ -1,13 +1,8 @@
 #intro {
+
 	.fullheight {
 		@include backImage('../images/mike-yeager-main.jpg', $bgPos: 70% 0);
 		@include breakpoint($medium) {background-position: center center;}
-
-		@include display-flex();
-
-		/*@include align-items(center);*/
-		/*@include justify-content(center);*/
-
 		
 		
 		#introText {
@@ -64,16 +59,17 @@
 				} //img
 			} //next
 		} //introtext
+
 		#sponsors {
 			background: rgba($dark, .8);
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			height: 110px;
+			height: 125px;
 			width: 100%;
 			padding: 10px;
 			white-space: nowrap;
-			overflow-x: scroll;
+			overflow-x: auto;
 			overflow-y: hidden;
 
 			.wrap {
@@ -88,7 +84,8 @@
 				width: auto;
 			}
 			img:first-child {margin-left: 0;}
-		}
+		} //sponsors
+
 		@include breakpoint($small) {
 			#introText {
 				padding-top: 10em;
@@ -101,4 +98,5 @@
 			#introText {width: 800px;}
 		}
 	} //fullheight
+
 } //header
