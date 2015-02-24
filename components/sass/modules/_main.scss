@@ -14,7 +14,7 @@
 			  ), $version: 2);
 			  @include flexbox((
 			    display: flex,
-			    flex-direction: row
+			    flex-adirection: row
 			  ));
 			@include align-items(center);
 			@include justify-content(center);
@@ -36,6 +36,18 @@
 				padding: 20px;
 				max-height: 90%;
 				overflow-y: auto;
+
+				.nav {
+					font-size: 2em;
+					padding-top: .5em;
+					text-align: center;
+
+					a {color: darken($light, 50);
+						&:hover {color: darken($light, 65)}
+					}
+
+					a:first-child {margin-right: .5em;}
+				}
 			} //content	
 		} //fullheight
 

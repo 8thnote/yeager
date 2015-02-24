@@ -18,3 +18,11 @@ p {
 	font-weight: $thin;
 	padding-bottom: 10px;
 }
+
+a {
+	color: $orange;
+	transition-property: color, font-size, text-decoration;
+	transition-duration: .1s;
+	transition-timing-function: ease-in;
+}
+a:hover {color: lighten($orange, 10); text-decoration: underline;}

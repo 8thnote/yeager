@@ -51,12 +51,14 @@
 
 			.next {
 				text-align: center;
-				color: $light;
 				transition: .4s ease-in;
-				img {
-					max-width: 50px;
-					transition: .4s ease-in;
-				} //img
+				a {
+					color: darken($light, 5);
+					font-size: 4em;
+					@include text-shadow($dark 2px 2px 2px);
+
+					&:hover {color: lighten($light, 30)}
+				} //a
 			} //next
 		} //introtext
 

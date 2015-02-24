@@ -1,12 +1,12 @@
 {
-  "name": "SinglePageResponsive",
+  "name": "MikeYeager",
   "version": "0.0.1",
-  "description": "A website that uses single page responsive CSS with Sass, Compass, Susy 2, etc",
+  "description": "Custom website for Mike Yeager - Pro Angler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planetoftheweb/responsive.git"
+    "url": "https://github.com/immatct/yeager"
   },
-  "author": "Ray Villalobos",
+  "author": "Don Helm",
   "devDependencies": {
     "browser-sync": "^1.8.2",
     "gulp": "^3.8.7",
