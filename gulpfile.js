@@ -18,7 +18,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -32,7 +32,6 @@ jsSources = [
   'components/scripts/jqloader.js',
   'components/scripts/TweenMax.min.js',
   'components/scripts/jquery.scrollmagic.min.js',
-  'components/scripts/onepage-scroll.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];

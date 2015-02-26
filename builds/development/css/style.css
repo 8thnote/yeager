@@ -622,36 +622,37 @@ body {
 #contact .fullheight .content {
   background: rgba(0, 0, 0, 0.7);
   color: #f0f0f0;
+  max-width: 480px;
 }
-/* line 11, ../../../components/sass/modules/_contact.scss */
+/* line 12, ../../../components/sass/modules/_contact.scss */
 #contact .fullheight .content p {
   margin-bottom: 1.5em;
 }
 
-/* line 19, ../../../components/sass/modules/_contact.scss */
+/* line 20, ../../../components/sass/modules/_contact.scss */
 form input, form textarea, form button {
   font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.2em;
 }
-/* line 24, ../../../components/sass/modules/_contact.scss */
+/* line 25, ../../../components/sass/modules/_contact.scss */
 form input, form textarea {
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 28, ../../../components/sass/modules/_contact.scss */
+/* line 29, ../../../components/sass/modules/_contact.scss */
 form input {
   height: 2em;
   padding: 0 10px;
 }
-/* line 32, ../../../components/sass/modules/_contact.scss */
+/* line 33, ../../../components/sass/modules/_contact.scss */
 form textarea {
   height: 100px;
   padding: 5px 10px;
   resize: none;
   overflow: auto;
 }
-/* line 38, ../../../components/sass/modules/_contact.scss */
+/* line 39, ../../../components/sass/modules/_contact.scss */
 form button {
   display: block;
   margin: 0 auto;
