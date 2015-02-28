@@ -54,7 +54,10 @@
 				transition: .4s ease-in;
 				a {
 					color: darken($light, 5);
-					font-size: 4em;
+					font-size: 3em;
+					@include breakpoint($small) {
+						font-size: 4em;
+					}
 					@include text-shadow($dark 2px 2px 2px);
 
 					&:hover {color: lighten($light, 30)}

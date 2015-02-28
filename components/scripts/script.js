@@ -6,12 +6,11 @@ $(function() {
 	var wheight = $(window).height(); //get height of the window
 
 	$('.fullheight').css('height', wheight);
-	$('#about .fullheight').css('height', wheight - topoffset);
+
 
 	$(window).resize(function() {
 		var wheight = $(window).height(); //get height of the window
 		$('.fullheight').css('height', wheight);
-		$('#about .fullheight').css('height', wheight - topoffset);
 	});
 
 	//smooth scrolling
@@ -55,6 +54,11 @@ $(function() {
 		}
 	});
 
+	//focus on form
+	$('a[href$="#contact"]').click(function() {
+		$('#name').focus();
+	});
+
 	//set up ScrollMagic
 	var controller = new ScrollMagic({
 		globalSceneOptions: {
@@ -70,7 +74,7 @@ $(function() {
 	if(!isTouch) {
 		//box animations
 		var aboutTween = TweenMax.from(
-			"#about .content", 0.6, {css:{transform:"translateX(3000px)",opacity:0}});
+			"#about .content", 0.6, {css:{transform:"translateX(3000px)",opacity:0}, ease:Expo.easeOut});
 
 		var pin = new ScrollScene({
 			triggerElement: '#about',
@@ -79,7 +83,7 @@ $(function() {
 		}).setTween(aboutTween).addTo(controller);
 
 		var gearTween = TweenMax.from(
-			"#gear .content", 0.6, {css:{transform:"translateX(-3000px)",opacity:0}});
+			"#gear .content", 0.6, {css:{transform:"translateX(-3000px)",opacity:0}, ease:Expo.easeOut});
 
 		var pin = new ScrollScene({
 			triggerElement: '#gear',
@@ -88,7 +92,7 @@ $(function() {
 		}).setTween(gearTween).addTo(controller);
 
 		var tournTween = TweenMax.from(
-			"#tournaments .content", 0.6, {css:{transform:"translateX(3000px)",opacity:0}});
+			"#tournaments .content", 0.6, {css:{transform:"translateX(3000px)",opacity:0}, ease:Expo.easeOut});
 
 		var pin = new ScrollScene({
 			triggerElement: '#tournaments',
@@ -97,7 +101,7 @@ $(function() {
 		}).setTween(tournTween).addTo(controller);
 
 		var contactTween = TweenMax.from(
-			"#contact .content", 0.6, {css:{opacity:0}});
+			"#contact .content", 0.8, {css:{transform:"translateY(1000px)",opacity:0}, ease:Expo.easeOut});
 
 		var pin = new ScrollScene({
 			triggerElement: '#contact',
