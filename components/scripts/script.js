@@ -5,12 +5,21 @@ $(function() {
 
 	var wheight = $(window).height(); //get height of the window
 
-	$('.fullheight').css('height', wheight);
-
-
-	$(window).resize(function() {
-		var wheight = $(window).height(); //get height of the window
+	//set height of fullheight class to window height only for 650px width and above
+	if ($(window).width() >= 650) {
 		$('.fullheight').css('height', wheight);
+	};
+	//set again when window is resized
+	$(window).resize(function() {
+		if ($(window).width() >= 650) {
+			var wheight = $(window).height(); //get height of the window
+			$('.fullheight').css('height', wheight);
+		}
+	});
+	//set height of intro fullheight for all window sizes
+	$('#intro .fullheight').css('height', wheight);
+	$(window).resize(function() {
+		$('#intro .fullheight').css('height', wheight);
 	});
 
 	//smooth scrolling
@@ -57,6 +66,11 @@ $(function() {
 	//focus on form
 	$('a[href$="#contact"]').click(function() {
 		$('#name').focus();
+	});
+
+	//mobile nav
+	$('.fa-bars').click(function() {
+		$('nav ul').toggle();
 	});
 
 	//set up ScrollMagic

@@ -3,6 +3,8 @@
 	.fullheight {
 		@include backImage('../images/mike-yeager-main.jpg', $bgPos: 70% 0);
 		@include breakpoint($medium) {background-position: center center;}
+
+		position: relative;
 		
 		
 		#introText {

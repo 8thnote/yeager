@@ -1,11 +1,14 @@
 #wrapper {
 	@include breakpoint(max-width $small) {
-		font-size: .8em;
+		font-size: 1em;
 	}
 
 		.fullheight {
 			@include container(100%);
 			@include pad(1,1);
+			@include breakpoint(max-width $small) {
+				padding: 2em 5%;
+			}
 
 			@include flexbox((
 			    display: box,
@@ -47,6 +50,9 @@
 
 				.nav {
 					font-size: 2em;
+					@include breakpoint(max-width $small) {
+						display: none;
+					}
 					padding-top: .5em;
 					text-align: center;
 
@@ -81,6 +87,9 @@
 	#about {
 		.fullheight {
 			@include backImage('../images/about-mike.jpg');
+			@include breakpoint(max-width $small){
+				@include backImage('../images/about-mike.jpg', $bgPos: 40% 0);
+			}
 		}
 	} //about
 	#gear {
