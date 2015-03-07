@@ -4,6 +4,8 @@
 	width: 100%;
 	z-index: 100;
 
+	&.mobile ul {display: none;}
+
 	.navbar {
 		@include container;
 		.brand {
@@ -59,9 +61,6 @@
 			@include breakpoint($small) {
 				@include span(8 at 4 of 12);
 			}
-			@include breakpoint(0 $small) {
-				display: none;
-			} //breakpoint
 			
 			li {
 				@include breakpoint($small) {

@@ -70,7 +70,27 @@ $(function() {
 	});
 
 	//mobile nav
-	
+	if ($(window).width() < 650) {
+		$('#nav').addClass('mobile');
+	}
+
+	$(window).resize(function() {
+		$('#nav').removeClass('mobile');
+
+		if ($(window).width() < 650) {
+			$('#nav').addClass('mobile');
+		} else {
+			$('#nav').removeClass('mobile');
+		}
+	}
+
+	$('.mobile .fa-bars').click(function() {
+		$('.mobile ul').toggle();
+	});
+	$('.mobile ul a').click(function() {
+		$('.mobile ul').toggle();
+	});
+
 
 	//set up ScrollMagic
 	var controller = new ScrollMagic({

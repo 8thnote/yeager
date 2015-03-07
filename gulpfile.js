@@ -18,7 +18,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -52,7 +52,7 @@ gulp.task('js', function() {
     .on('error', gutil.log)
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(connect.reload())
 });
 
 gulp.task('compass', function() {
@@ -72,7 +72,7 @@ gulp.task('compass', function() {
 
 //BrowserSync
 gulp.task('bs-reload', function () {
-  browserSync.reload({stream:true});
+  browserSync.reload();
 });
 
 
@@ -102,4 +102,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['browser-sync', 'bs-reload', 'watch', 'html', 'js', 'compass', 'move']);
+gulp.task('default', ['browser-sync', 'watch', 'html', 'js', 'compass', 'move']);

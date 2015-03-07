@@ -318,6 +318,10 @@ body {
   clear: both;
 }
 /* line 7, ../../../components/sass/modules/_nav.scss */
+#nav.mobile ul {
+  display: none;
+}
+/* line 9, ../../../components/sass/modules/_nav.scss */
 #nav .navbar {
   max-width: 60em;
   margin-left: auto;
@@ -329,7 +333,7 @@ body {
   display: block;
   clear: both;
 }
-/* line 9, ../../../components/sass/modules/_nav.scss */
+/* line 11, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .brand {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -345,7 +349,7 @@ body {
   margin: 0;
 }
 @media (min-width: 650px) {
-  /* line 9, ../../../components/sass/modules/_nav.scss */
+  /* line 11, ../../../components/sass/modules/_nav.scss */
   #nav .navbar .brand {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -356,7 +360,7 @@ body {
     padding-right: 0.83333%;
   }
 }
-/* line 19, ../../../components/sass/modules/_nav.scss */
+/* line 21, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .brand a {
   background: #e55927;
   color: #f0f0f0;
@@ -367,17 +371,17 @@ body {
   padding: 7px 5px 3px 5px;
   position: relative;
 }
-/* line 29, ../../../components/sass/modules/_nav.scss */
+/* line 31, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .brand a span {
   letter-spacing: -0.2em;
 }
 @media (max-width: 650px) {
-  /* line 19, ../../../components/sass/modules/_nav.scss */
+  /* line 21, ../../../components/sass/modules/_nav.scss */
   #nav .navbar .brand a {
     font-size: 1em;
   }
 }
-/* line 37, ../../../components/sass/modules/_nav.scss */
+/* line 39, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .brand a:before {
   content: '';
   position: absolute;
@@ -387,7 +391,7 @@ body {
   right: 100%;
   top: 0;
 }
-/* line 46, ../../../components/sass/modules/_nav.scss */
+/* line 48, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .brand a:after {
   content: '';
   position: absolute;
@@ -398,7 +402,7 @@ body {
   top: 0;
 }
 @media (min-width: 650px) {
-  /* line 58, ../../../components/sass/modules/_nav.scss */
+  /* line 60, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -409,19 +413,13 @@ body {
     padding-right: 0.83333%;
   }
 }
-@media (min-width: 0) and (max-width: 650px) {
-  /* line 58, ../../../components/sass/modules/_nav.scss */
-  #nav .navbar ul {
-    display: none;
-  }
-}
 @media (min-width: 650px) {
-  /* line 66, ../../../components/sass/modules/_nav.scss */
+  /* line 65, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li {
     float: left;
   }
 }
-/* line 70, ../../../components/sass/modules/_nav.scss */
+/* line 69, ../../../components/sass/modules/_nav.scss */
 #nav .navbar ul li a {
   color: #f0f0f0;
   font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -434,42 +432,42 @@ body {
   width: 100%;
 }
 @media (min-width: 650px) {
-  /* line 70, ../../../components/sass/modules/_nav.scss */
+  /* line 69, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a {
     margin: 0 26px;
   }
 }
 @media (min-width: 650px) {
-  /* line 70, ../../../components/sass/modules/_nav.scss */
+  /* line 69, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a {
     width: 102px;
   }
 }
-/* line 87, ../../../components/sass/modules/_nav.scss */
+/* line 86, ../../../components/sass/modules/_nav.scss */
 #nav .navbar ul li a:hover {
   color: #f0f0f0;
   font-weight: 600;
 }
 @media (min-width: 650px) and (max-width: 960px) {
-  /* line 70, ../../../components/sass/modules/_nav.scss */
+  /* line 69, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a {
     padding: 11px 0;
     width: 62px;
     margin: 0 16px;
   }
-  /* line 95, ../../../components/sass/modules/_nav.scss */
+  /* line 94, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a span {
     display: none;
   }
 }
-/* line 98, ../../../components/sass/modules/_nav.scss */
+/* line 97, ../../../components/sass/modules/_nav.scss */
 #nav .navbar ul li a.active {
   background-color: #8a8a8a;
   color: #f0f0f0;
   font-weight: 600;
 }
 @media (min-width: 650px) {
-  /* line 104, ../../../components/sass/modules/_nav.scss */
+  /* line 103, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a.active:before {
     content: '';
     position: absolute;
@@ -479,7 +477,7 @@ body {
     right: 100%;
     top: 0;
   }
-  /* line 113, ../../../components/sass/modules/_nav.scss */
+  /* line 112, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a.active:after {
     content: '';
     position: absolute;
@@ -491,12 +489,12 @@ body {
   }
 }
 @media (min-width: 650px) and (max-width: 960px) {
-  /* line 127, ../../../components/sass/modules/_nav.scss */
+  /* line 126, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li#tournLink a {
     width: 104px;
   }
 }
-/* line 132, ../../../components/sass/modules/_nav.scss */
+/* line 131, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .fa-bars {
   color: #f0f0f0;
   font-size: 1.5em;
@@ -505,7 +503,7 @@ body {
   top: .5em;
 }
 @media (min-width: 650px) {
-  /* line 140, ../../../components/sass/modules/_nav.scss */
+  /* line 139, ../../../components/sass/modules/_nav.scss */
   #nav .navbar .fa-bars {
     display: none;
   }

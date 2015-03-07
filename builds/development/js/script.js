@@ -93,7 +93,7 @@ $(function() {
 	});
 
 	//mobile nav
-	
+	$('#nav').addClass('mobile');
 
 	//set up ScrollMagic
 	var controller = new ScrollMagic({
