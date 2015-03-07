@@ -42,6 +42,7 @@ $(function() {
 	//set height of intro fullheight for all window sizes
 	$('#intro .fullheight').css('height', wheight);
 	$(window).resize(function() {
+		var wheight = $(window).height(); //get height of the window
 		$('#intro .fullheight').css('height', wheight);
 	});
 
@@ -92,9 +93,7 @@ $(function() {
 	});
 
 	//mobile nav
-	$('.fa-bars').click(function() {
-		$('nav ul').toggle();
-	});
+	
 
 	//set up ScrollMagic
 	var controller = new ScrollMagic({

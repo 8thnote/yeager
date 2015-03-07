@@ -427,7 +427,6 @@ body {
   font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   display: inline-block;
-  margin: 0 26px;
   padding: 11px 0;
   position: relative;
   text-align: center;
@@ -437,10 +436,16 @@ body {
 @media (min-width: 650px) {
   /* line 70, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a {
+    margin: 0 26px;
+  }
+}
+@media (min-width: 650px) {
+  /* line 70, ../../../components/sass/modules/_nav.scss */
+  #nav .navbar ul li a {
     width: 102px;
   }
 }
-/* line 85, ../../../components/sass/modules/_nav.scss */
+/* line 87, ../../../components/sass/modules/_nav.scss */
 #nav .navbar ul li a:hover {
   color: #f0f0f0;
   font-weight: 600;
@@ -452,19 +457,19 @@ body {
     width: 62px;
     margin: 0 16px;
   }
-  /* line 93, ../../../components/sass/modules/_nav.scss */
+  /* line 95, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a span {
     display: none;
   }
 }
-/* line 96, ../../../components/sass/modules/_nav.scss */
+/* line 98, ../../../components/sass/modules/_nav.scss */
 #nav .navbar ul li a.active {
   background-color: #8a8a8a;
   color: #f0f0f0;
   font-weight: 600;
 }
 @media (min-width: 650px) {
-  /* line 102, ../../../components/sass/modules/_nav.scss */
+  /* line 104, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a.active:before {
     content: '';
     position: absolute;
@@ -474,7 +479,7 @@ body {
     right: 100%;
     top: 0;
   }
-  /* line 111, ../../../components/sass/modules/_nav.scss */
+  /* line 113, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li a.active:after {
     content: '';
     position: absolute;
@@ -486,12 +491,12 @@ body {
   }
 }
 @media (min-width: 650px) and (max-width: 960px) {
-  /* line 125, ../../../components/sass/modules/_nav.scss */
+  /* line 127, ../../../components/sass/modules/_nav.scss */
   #nav .navbar ul li#tournLink a {
     width: 104px;
   }
 }
-/* line 130, ../../../components/sass/modules/_nav.scss */
+/* line 132, ../../../components/sass/modules/_nav.scss */
 #nav .navbar .fa-bars {
   color: #f0f0f0;
   font-size: 1.5em;
@@ -500,7 +505,7 @@ body {
   top: .5em;
 }
 @media (min-width: 650px) {
-  /* line 138, ../../../components/sass/modules/_nav.scss */
+  /* line 140, ../../../components/sass/modules/_nav.scss */
   #nav .navbar .fa-bars {
     display: none;
   }

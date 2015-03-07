@@ -52,7 +52,7 @@ gulp.task('js', function() {
     .on('error', gutil.log)
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'))
-    .pipe(connect.reload())
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('compass', function() {
@@ -72,7 +72,7 @@ gulp.task('compass', function() {
 
 //BrowserSync
 gulp.task('bs-reload', function () {
-  browserSync.reload();
+  browserSync.reload({stream:true});
 });
 
 
@@ -102,4 +102,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['browser-sync', 'watch', 'html', 'js', 'compass', 'move']);
+gulp.task('default', ['browser-sync', 'bs-reload', 'watch', 'html', 'js', 'compass', 'move']);
