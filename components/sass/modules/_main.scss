@@ -4,6 +4,7 @@
 	}
 
 		.fullheight {
+			@include backImage;
 			@include container(100%);
 			@include pad(1,1);
 			@include breakpoint(max-width $small) {
@@ -86,25 +87,26 @@
 
 	#about {
 		.fullheight {
-			@include backImage('../images/about-mike.jpg');
+			background-image: url('../images/about-mike.jpg');
+			background-position: center center;
 			@include breakpoint(max-width $small){
-				@include backImage('../images/about-mike.jpg', $bgPos: 40% 0);
+				background-position: 40% 0;
 			}
 		}
 	} //about
 	#gear {
 		.fullheight {
-			@include backImage('../images/mike-yeager-gear.jpg');		
+			background-image: url('../images/mike-yeager-gear.jpg');		
 		}
 	} //gear
 	#tournaments {
 		.fullheight {
-			@include backImage('../images/yeager-tournaments.jpg');		
+			background-image: url('../images/yeager-tournaments.jpg');		
 		}
 	} //tournaments
 	#contact {
 		.fullheight {
-			@include backImage('../images/mike-yeager-contact.jpg');		
+			background-image: url('../images/mike-yeager-contact.jpg');		
 		}
 	} //tournaments
 

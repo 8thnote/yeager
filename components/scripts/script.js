@@ -14,6 +14,8 @@ $(function() {
 		if ($(window).width() >= 650) {
 			var wheight = $(window).height(); //get height of the window
 			$('.fullheight').css('height', wheight);
+		} else {
+			$('.fullheight').css('height', 'auto');
 		}
 	});
 	//set height of intro fullheight for all window sizes
@@ -70,25 +72,24 @@ $(function() {
 	});
 
 	//mobile nav
+	var navToggle = function() {
+		if ($(window).width() < 650) {
+			$('#nav ul').toggle();
+		}
+	};
+	$('#nav .fa-bars').on("click", navToggle);
+	$('#nav ul a').on("click", navToggle);
+
 	if ($(window).width() < 650) {
-		$('#nav').addClass('mobile');
+		$('#nav ul').hide();
 	}
 
 	$(window).resize(function() {
-		$('#nav').removeClass('mobile');
-
 		if ($(window).width() < 650) {
-			$('#nav').addClass('mobile');
+			$('#nav ul').hide();
 		} else {
-			$('#nav').removeClass('mobile');
+			$('#nav ul').show();
 		}
-	}
-
-	$('.mobile .fa-bars').click(function() {
-		$('.mobile ul').toggle();
-	});
-	$('.mobile ul a').click(function() {
-		$('.mobile ul').toggle();
 	});
 
 

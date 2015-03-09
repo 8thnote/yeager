@@ -4,8 +4,6 @@
 	width: 100%;
 	z-index: 100;
 
-	&.mobile ul {display: none;}
-
 	.navbar {
 		@include container;
 		.brand {
@@ -134,6 +132,9 @@
 			position: absolute;
 			right: 1em;
 			top: .5em;
+			cursor: pointer;
+
+			&:hover {color: #fff;}
 		}
 		@include breakpoint($small) {
 			.fa-bars {display: none;}
