@@ -6,6 +6,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
     concat = require('gulp-concat'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    inject = require('gulp-inject'),
     path = require('path'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
@@ -66,6 +69,22 @@ gulp.task('compass', function() {
     .pipe(browserSync.reload({stream:true})); //BrowserSync
 });
 
+gulp.task('svgstore', function () {
+    var svgs = gulp
+        .src(outputDir + 'images/svg/*.svg')
+        .pipe(svgmin())
+        .pipe(svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp
+        .src(outputDir + 'index.html')
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest(outputDir));
+});
+
 //BrowserSync
 gulp.task('bs-reload', function () {
   browserSync.reload();
@@ -75,6 +94,7 @@ gulp.task('bs-reload', function () {
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['bs-reload']);
   gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
+  gulp.watch(outputDir + 'images/svg/*.svg', ['bs-reload']);
   gulp.watch('builds/development/*.html', ['bs-reload']);
 });
 
@@ -98,4 +118,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['browser-sync', 'watch', 'html', 'js', 'compass', 'move']);
+gulp.task('default', ['browser-sync', 'watch', 'html', 'js', 'compass', 'svgstore', 'move']);

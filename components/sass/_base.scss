@@ -6,8 +6,16 @@ body {
 
 #{headings()} {
 	font: $headFont;
-	color: $headColor;
+	color: $orange;
 	font-weight: $bold;
+}
+
+h2, h3, h4 {
+	font-family: $fontFamily2;
+	color: $light;
+	@include breakpoint($small) {
+		color: lighten($dark, 30);
+	}
 }
 
 strong {
